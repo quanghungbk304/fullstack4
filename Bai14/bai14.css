@@ -1,0 +1,124 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.container {
+	width:980px;
+	margin:20px auto;
+}
+
+.container .block-header {
+	border-bottom: 1px solid #00ACC1;
+
+}
+
+.container .block-header h3 {
+	background: #00ACC1;
+	display: inline-block;
+	padding: 7px 15px;
+	font-size: 15px;
+	font-weight: normal;
+	color:white;
+}
+
+li {
+	list-style-type: none;
+}
+.container ul li{
+	flex-basis: 20%;
+	height:40px;
+	line-height: 40px;
+	background-image:url(image/icon.png);
+	background-repeat:no-repeat;
+}
+
+.container ul {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 240px;
+}
+
+.container ul li a {
+	font-size:12px;
+	text-decoration:none;
+	color:black;
+	padding: 5px 0px 5px 30px;
+}
+
+.container ul li a:hover {
+	font-weight:bold;
+	color:#00ACC1;
+}
+
+.container ul li:nth-child(1){	/*Từ điển trực tuyến*/
+	background-image: url(image/icon-tdtt.jpg);
+	background-position:0px 8px;
+}
+.container ul li:nth-child(2){	/*Thông tin thời tiết*/
+	background-position:0px -2222px;
+}
+.container ul li:nth-child(3){	/*Giá vàng*/
+	background-position:0px -2053px;
+}
+.container ul li:nth-child(4){	/*Google*/
+	background-position:0px -1238px;
+}
+
+.container ul li:nth-child(5){	/*Chia sẻ file & Tài liệu*/
+	background-position:0px -1138px;
+}
+.container ul li:nth-child(6){	/*Kết quả xổ số*/
+	background-position:0px -2302px;
+}
+.container ul li:nth-child(7){	/*Xem lịch âm*/
+	background-position:0px 0px;
+}
+.container ul li:nth-child(8){	/*Tỉ giá*/
+	background-position:0px -2098px;
+}
+.container ul li:nth-child(9){	/*Điểm đặt máy ATM*/
+	background-image: url(image/icon-atm.png);
+	background-position:0px 8px;
+}
+.container ul li:nth-child(10){	/*Tìm đường đi*/
+	background-position:0px -2382px;
+}
+.container ul li:nth-child(11){	/*Kết quả bóng đá*/
+	background-position:0px -258px;
+}
+.container ul li:nth-child(12){	/*Lịch phim chiếu rạp*/
+	background-position:0px -2136px;
+}
+.container ul li:nth-child(13){	/*Lãi suất ngân hàng*/
+	background-position:0px -2884px;
+}
+.container ul li:nth-child(14){	/*Việc làm*/
+	background-position:0px -776px;
+}
+.container ul li:nth-child(15){ /*Tra cứu*/
+	background-image: url(image/icon-tracuu.jpg);
+	background-position:0px 8px;
+}
+.container ul li:nth-child(16){	/*Thông tin bóng đá*/
+	background-image: url(image/icon-bongda.png);
+	background-position:0px 8px;
+}
+.container ul li:nth-child(17){	/*Lịch truyền hình*/
+	background-position:0px -2262px;
+}
+.container ul li:nth-child(18){	/*Chứng khoán trực tuyến*/
+	background-position:0px -1552px;
+}
+.container ul li:nth-child(19){	/*Tìm việc làm*/
+	background-position:0px -776px;
+}
+
+.hot, .new{
+	padding-left:5px;
+}
