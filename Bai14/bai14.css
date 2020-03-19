@@ -13,7 +13,6 @@
 
 .container .block-header {
 	border-bottom: 1px solid #00ACC1;
-
 }
 
 .container .block-header h3 {
@@ -25,23 +24,21 @@
 	color:white;
 }
 
-li {
-	list-style-type: none;
-}
-.container ul li{
-	flex-basis: 20%;
-	height:40px;
-	line-height: 40px;
-	background-image:url(image/icon.png);
-	background-repeat:no-repeat;
-}
-
 .container ul {
 	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	height: 240px;
+	list-style-type: none;
+}
+
+.container ul li{
+	flex-basis: 20%;
+	height:40px;
+	line-height: 40px;
+	background-image:url(image/icon.png);
+	background-repeat:no-repeat;
 }
 
 .container ul li a {
