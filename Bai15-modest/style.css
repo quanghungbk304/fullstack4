@@ -19,37 +19,101 @@ p {
     font-weight: normal;
 }
 
+#wrapper {
+    margin: 0px auto;
+}
 
 .container {
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.container h2 {
+    border-left: 10px solid #ccd0d7;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    color: #292f36;
+    padding-left: 15px;
+    width: 100%;
 }
 
 /* header */
 
 header {
-    height: 81px;
     background-color: #122126;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
 }
 
 header .container h1 {
-    margin-left: 0px;
+    /* margin-left: 0px; */
     line-height: 81px;
+    width: 120px;
+}
+
+header .container input {
+    display: none;
+}
+
+header .container label {
+    display: none;
+}
+
+header .container label i {
+    font-size: 24px;
+    line-height: 80px;
+}
+
+header .container label i:nth-child(1) {
+    display: block;
+}
+header .container label i:nth-child(2) {
+    display: none;
+}
+
+
+header .container input:checked + label i:nth-child(1) {
+    display: none;
+}
+
+header .container input:checked + label i:nth-child(2) {
+    display: block;
+}
+
+header .container input:checked ~ ul {
+    display: block;
+}
+
+
+header .container ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* display:block; */
+    width: 650px;
+    list-style-type: none;
 }
 
 header .container ul li {
     display: inline-block;
-    height: 80px;
+    /* height: 80px; */
 }
 
 header .container ul li a {
     line-height: 80px;
-    margin: 0px 10px;
-    border: 2px solid #5b616800;
+    margin: 0px auto;
+    border: 2px solid #1d212600;
     border-radius: 3px;
     padding: 7px 10px;
     color: #a4aead;
@@ -57,7 +121,7 @@ header .container ul li a {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-
+    
 }
 
 header .container ul li a:hover {
@@ -81,18 +145,12 @@ header .container ul li a:active {
 
 }
 
-
-
-#hero #top {
+#hero .container {
     padding-top:225px;
 }
 
 #hero .container h2 {
-    line-height: 36px;
-    font-size: 36px;
     color: white;
-    text-transform: uppercase;    
-    font-weight: regular;
 }
 
 #hero .container p {
@@ -101,7 +159,7 @@ header .container ul li a:active {
     font-size: 16px;
     line-height: 26px;
     margin-top: 28px;
-    width: 650px;
+    max-width: 650px;
 }
 
 #hero .container div {
@@ -131,16 +189,6 @@ header .container ul li a:active {
     border-color: #23b7a4;
 }
 
-.container h2 {
-    border-left: 10px solid #ccd0d7;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #292f36;
-    padding-left: 15px;
-    width: 100%;
-}
 
 #hero .container {
     position: relative;
@@ -149,7 +197,7 @@ header .container ul li a:active {
 
 #hero .container ul {
     position: absolute;
-    right: 0px;
+    right: 15px;
     bottom: 30px;
 }
 
@@ -195,7 +243,7 @@ header .container ul li a:active {
 }
 
 #about .container > div {
-    width: 650px;
+    width: calc(100% - 500px);
     margin-top: 55px;
 }
 
@@ -208,8 +256,10 @@ header .container ul li a:active {
 
 #about .container div div ul {
     display: flex;
-    /* height: 60px; */
+    flex-wrap: wrap;
     margin-top: 45px;
+    
+
 }
 
 #about .container div div ul li {
@@ -311,23 +361,25 @@ header .container ul li a:active {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    flex-wrap: wrap;
 }
 
 
 #team #team-list > div {
-    width: 263px;
-    /* height: 375px; */   
+    width: calc((100% - 90px) / 4);
     position: relative;
+
     
 }
 
 #team #team-list > div img {
     display: block;
+    width: 100%;
 }
 
 
 #team #team-list > div:hover img {
-    opacity: 50%;
+    opacity: 60%;
 }
 
 
@@ -354,19 +406,26 @@ header .container ul li a:active {
 
 #team #team-list div .t-mask {
    position: absolute;
-   top:125px;
-   left: 55px;
+   top:0px;
+   left:0px;
+   height: 100%;
+   width: 100%;
    display: none;
-   
+    
 }
 
 #team #team-list div .t-mask ul {
     display: flex;
+    justify-content: center;
+    height: calc(100% - 77px);
+    align-items: center;
+
 }
 
 #team #team-list div .t-mask ul li {
     list-style-type: none;
     margin-left: 1px;
+    display: inline-block;
  
 }
 
@@ -401,6 +460,7 @@ header .container ul li a:active {
 
 #team #team-list > div:hover .t-mask {
     display: block;
+    
 }
 
 
@@ -423,27 +483,37 @@ header .container ul li a:active {
     justify-content: space-between;
 }
 
-#work .container div div {
-    width: 360px;
-    /* height: 265px; */
+#work .container > div > div {
+    width: calc((100% - 60px) / 3);
     margin-bottom: 30px;
     position: relative;
+}
+
+#work .container > div > div > img {
+    display: block;
+    width:100% ;
 }
 
 #work .container div div .mask {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 360px;
-    height: 265px;
+    width: 100%;
+    height: 100%;
     background-color: #292f3688;
-    background-repeat: no-repeat;
     display: none;
 }
 
+#work .container div div .mask a {
+    display: block;
+    height: calc(100% - 60px);
+    background-image: url(image/work/plus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -100000px;
+}
+
 #work .container div div .mask h4 {
-    display: inline-block;
-    width: 360px;
     height: 60px;
     font-size: 18px;
     line-height: 60px;
@@ -451,22 +521,7 @@ header .container ul li a:active {
     text-transform: uppercase;
     color: white;
     background-color: #292f36;
-    position: absolute;
-    top: 205px;
-    
 }
-
-#work .container div div .mask a {
-    display: inline-block;
-    width: 360px;
-    height: 205px;
-    position: absolute;
-    background-image: url(image/work/plus.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -100000px;
-}
-
 #work .container div div:hover .mask{
     display: block;
 }
@@ -500,6 +555,10 @@ header .container ul li a:active {
 
 }
 
+#wwd .container h2 {
+    margin-bottom: 80px;
+}
+
 #wwd .container ul {
     list-style-type: none;
     display: flex;
@@ -507,8 +566,9 @@ header .container ul li a:active {
 }
 
 #wwd .container ul li {
-    width: 285px;
-    padding: 10px;
+    /* width: 285px; */
+    width: calc((100%-90px)/4);
+    padding: 10px 0px;
     text-align: center;
 }
 
@@ -552,8 +612,12 @@ header .container ul li a:active {
 }
 
 #features .container > div > div {
-    width: 360px;  
+    width: calc((100% - 60px)/3);
+    /* min-width: 200px;   */
+}
 
+#features .container > div > div > img {
+    width: 100%;
 }
 
 #features .container > div > div h4 {
@@ -576,7 +640,8 @@ header .container ul li a:active {
 /* --------------------STAY IN TOUCH ---------------- */
 
 #contact {
-    margin-bottom: 104px;
+    padding-bottom: 104px;
+    position: static;
 }
 
 #contact .container h2 {
@@ -589,7 +654,20 @@ header .container ul li a:active {
     height: 345px;
 }
 
-#contact .container div #contact-info h4 {
+#contact #ct {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -150px;
+    position: relative;
+}
+ 
+
+#contact #ct #contact-info {
+    margin-top: 130px;
+    width: 555px;  
+}
+
+#contact #ct #contact-info h4 {
     font-size: 20px;
     color: #292f36;
     text-transform: uppercase;
@@ -597,53 +675,45 @@ header .container ul li a:active {
 
 }
 
-#contact .container div #contact-info p {
+#contact #ct #contact-info p {
     color: #8d8f92;
     font-size: 16px;
     line-height: 26px;
     margin-top: 35px;
 }
 
-#contact .container div {
-    /* display: flex;
-    flex-wrap: wrap; */
-
-}
-
-#contact .container div #contact-info {
-    width: 570px;
-}
-
-#contact .container div {
-    position: relative;
-}
-
-#contact .container div form {
+/* -----------START FORM--------------- */
+#ct form {
     width: 555px;
-    height: 400px;
     background-color: white;
-    position: absolute;
-    top: -190px;
-    right: 0px;
-    padding:30px;
+    padding: 30px;
+    margin-top: 20px;
+
 }
 
-
-#contact .container > div > form > div{
+#ct > form > div:first-child{
     display: flex;
-    justify-content: space-between;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; 
+
 }
 
-#contact .container div form div div label {
+#ct > form > div > div {
+    width: calc((100% - 16px) / 2); 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ct form div div label {
     font-size: 14px;
     line-height: 26px;
     color: #8d8f92;
     text-transform: uppercase;  
 }   
 
-/* Your name & Your email input */
-#contact .container div form div div input {
-    width: 240px;
+#ct form div div input {
+    width: 100%;
     height: 44px;
     background-color: #eaeef1;
     border: none;
@@ -652,47 +722,37 @@ header .container ul li a:active {
     font-size: 16px;
     padding: 5px 5px;
     line-height: 26px;
-
-
 }
 
-#contact .container > div > form #msg{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  
-}
 
-#contact .container div form div label {
+#ct form #msg label {
     font-size: 14px;
     line-height: 26px;
     color: #8d8f92;
     text-transform: uppercase;  
     display: block;
-    margin: 0px 0px;
-}
-
-#contact .container div form #msg label {
     margin-top: 30px;
 }
 
+
 /* Your message input*/
-#contact .container div form div textarea {
-    /* width: 497px; */
-    height: 160px;
+#ct form div textarea {
+    width: 100%;
+    min-height: 160px;
     background-color: #eaeef1;
     border: none;
     border-radius: 3px;
-    resize: none;
+    resize: vertical;
     font-family: 'Open Sans';
     color: #122126;
     font-size: 16px;
-    padding: 5px 5px;
+    padding: 10px 10px;
     line-height: 20px;
 }
 
 
 /* SEND MESSAGE button */
-#contact .container div form input[type=submit] {
+#ct form input[type=submit] {
     height: 44px;
     line-height: 44px;
     text-decoration: none;
@@ -704,12 +764,11 @@ header .container ul li a:active {
     border-radius: 5px;
     text-transform: uppercase;
     padding: 0px 10px;
-    margin: 30px 0px;
+    margin-top: 30px;
     
 }
 
-/* SEND MESSAGE button hover */
- #contact .container div form input[type=submit]:hover {
+#ct form input[type=submit]:hover {
     background-color: #23b7a4;
     border-color: #23b7a4;
     color: white;
@@ -751,4 +810,154 @@ footer .container ul li a{
 footer .container ul li a:hover {
     text-shadow: 0px 0px 5px white ;
     color: #66d3c4;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 960px) {
+/* *** */
+    header .container ul {
+    width: calc(100% - 150px);
+    max-width: 650px;
+    }
+
+    #hero .container {
+        padding-top: 180px;
+        height: 550px;
+    }
+
+    #hero .container h2 {
+        border-left: none;
+        padding-left: 0px;
+    }
+    #hero .container > * {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    #hero .container div {
+        justify-content: center;
+    }
+
+    #about .container {
+        padding-bottom: 30px;
+        }
+
+    #about .container > div, #about .container > ul {
+        width: calc((100% - 30px) / 2);
+    }
+
+    #ct > form > div > div {
+        width: 100%;
+    }
+
+    #contact {
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+/* meet the team */
+    #team #team-list div .info {
+        height: 96px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+/* *** */
+
+
+    #hero .container {
+        padding-top: 80px;
+        height: 350px;
+    }
+
+
+    header .container ul {
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+    }
+
+    #about .container {
+    padding-bottom: 0px;
+    }
+    #about .container h2 {
+    margin-top: 50px;
+    }
+
+    #about .container > div {
+    margin-top: 30px;
+    }
+
+    #about .container > div, #about .container > ul {
+        width: 100%;
+    }
+
+    #about .container div div ul {
+    justify-content: center;
+    }
+
+    #about .container > ul {
+        padding-left: 0px;
+    }
+
+
+}
+
+@media screen and (max-width: 680px) {
+ 
+    header .container h1 {
+    width: calc(100% - 21px);
+    }
+
+    
+
+    header .container label {
+    display: block;
+    }
+
+
+
+    header .container ul {
+    display: none;
+    }
+
+    header .container input:checked ~ ul {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    header .container ul li a {
+        line-height: 50px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+    #hero .container {
+    padding-top: 20px;
+    height: 320px;
+    }
+
+    header .container h1 {
+    line-height: 40px;
+    }
+
+    header .container label i {
+        line-height: 40px;
+    }
+
+    #hero .container ul {
+    display: none;
+    }
+
 }

@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
     <title>Bài 15: cắt giao diện web: PSD to HTML: MODEST</title>
     
 
 </head>
 <body>
     
-
+<div id="wrapper">
 <header>
     <div class="container">
         <h1><a href="#"><img src="image/logo-modest.png" alt=""></a></h1>
-        <ul>
+        <input type="checkbox" id="main-menu" name="main-menu">
+        <label for="main-menu"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+    
+        <ul id="main-nav">
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Work</a></li>
@@ -28,10 +33,9 @@
 </header>
 
 <div id="hero">
-    <div id="top" class="container">
+    <div class="container">
         <h2>Welcome to our marketplace</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor 
-            non, ornare sagittis dolor. Nulla vestibulu lacus ...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor Nulla vestibulu lacus ...</p>
         <div>
             <a href="">View more</a>
             <a href="">Video tour</a>
@@ -305,37 +309,31 @@
 <div id="contact">
     <div class="container"><h2>Stay in touch</h2></div>
     
-
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d84287.21249278465!2d72.58057827869793!3d23.038489218254227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1585498875314!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
-    <div class="container">
-            
-        <div>
-            <div id="contact-info">
-                <h4>Contact information</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non, ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.<br><br> Cras fermentum elit quis magna congue, <strong> vel sodales</strong> arcu vestibulum. Nunc lobortis dui magna, quis dapibus lacus 
-                </p>
-
-            </div>
-            <form id="form" action="">
+    <div id="ct" class="container">
+        <div id="contact-info">
+            <h4>Contact information</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non, ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.<br><br> Cras fermentum elit quis magna congue, <strong> vel sodales</strong> arcu vestibulum. Nunc lobortis dui magna, quis dapibus lacus 
+            </p>
+        </div>           
+        <form id="form" action="">
+            <div>
                 <div>
-                    <div>
-                        <label for="name">Your name</label>
-                        <input type="text" name="name" id="name">
-                    </div>
-                    <div>
-                        <label for="email">Your email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
+                    <label for="name">Your name</label>
+                    <input type="text" name="name" id="name">
                 </div>
-                <div id="msg">
-                    <label for="message">Your message</label>
-                    <textarea type="text" name ="message" id="message"> </textarea>    
+                <div>
+                    <label for="email">Your email</label>
+                    <input type="email" name="email" id="email">
                 </div>
-                <input type="submit" value="Send message">                
-            </form>
-        </div>
-
+            </div>
+            <div id="msg">
+                <label for="message">Your message</label>
+                <textarea type="text" name ="message" id="message"> </textarea>    
+            </div>
+            <input type="submit" value="Send message">                
+        </form>   
     </div>
      
 </div>
@@ -353,7 +351,7 @@
     </div>
 </footer>
 
-
+</div>
 
 </body>
 </html>
