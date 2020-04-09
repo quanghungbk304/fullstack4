@@ -151,6 +151,7 @@ header .container ul li a:active {
 
 #hero .container h2 {
     color: white;
+    border-left: none;
 }
 
 #hero .container p {
