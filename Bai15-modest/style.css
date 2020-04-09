@@ -908,6 +908,75 @@ footer .container ul li a:hover {
         padding-left: 0px;
     }
 
+    #team {
+        margin-bottom: 0px;
+    }
+
+    #team #team-list {
+        margin-top: 30px;
+    }
+
+    #team #team-list > div {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 30px;
+    }
+
+    #wrapper > * {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    header {
+        padding: 0px;
+    }
+    #wrapper > * > h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    #about .container h2 {
+        margin-top: 0px;
+    }
+
+    #contact .container h2 {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    #work h2 {
+        margin-bottom: 30px;
+    }
+
+    #work .container > div > div {
+        width: calc((100% - 30px) / 2);
+    }
+
+    #work .container div button {
+        margin: 0px auto;
+    }
+
+    #wwd .container h2 {
+        margin-bottom: 30px;
+    }
+
+    #wwd .container ul li {
+        width: calc((100%-30px)/2);
+    }
+
+    #features .container h2 {
+        margin-bottom: 30px;
+    }
+
+    #features .container div {
+        margin-top: 0px;
+    }
+
+    #wrapper footer {
+        padding: 0px;
+    }
+
+
+
 
 }
 
@@ -938,9 +1007,57 @@ footer .container ul li a:hover {
         line-height: 50px;
     }
 
+    #features .container div {
+        display: block;
+        text-align: center;
+    }
+
+    #features .container > div > div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #features .container > div > div:last-child {
+        margin-bottom: 0px;
+    }
+
+    #features .container > div > div h4 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    #contact #ct {
+     flex-wrap: wrap;
+    }
+
+
+    #contact #ct > * {
+        width: 100%;
+    }
+
+    #ct form {
+        padding: 0px;
+    }
 
 
 }
+
+
+@media screen and (max-width: 600px) {
+    footer .container {
+        flex-wrap: wrap;
+        padding-top: 20px;
+        text-align: center;
+        
+    }
+    
+    footer .container > * {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+}
+
 
 @media screen and (max-width: 500px) {
     #hero .container {
@@ -948,7 +1065,7 @@ footer .container ul li a:hover {
     height: 320px;
     }
 
-    header .container h1 {
+   #wrapper header .container h1 {
     line-height: 40px;
     }
 
@@ -959,5 +1076,10 @@ footer .container ul li a:hover {
     #hero .container ul {
     display: none;
     }
+
+    #ct form input[type=submit] {
+        width: 100%;
+    }
+
 
 }
