@@ -567,7 +567,7 @@ header .container ul li a:active {
 
 #wwd .container ul li {
     /* width: 285px; */
-    width: calc((100%-90px)/4);
+    width: calc((100% - 90px ) / 4);
     padding: 10px 0px;
     text-align: center;
 }
@@ -960,7 +960,7 @@ footer .container ul li a:hover {
     }
 
     #wwd .container ul li {
-        width: calc((100%-30px)/2);
+        width: calc((100% - 30px) / 2);
     }
 
     #features .container h2 {
