@@ -142,6 +142,7 @@ header .container ul li a:active {
     background-image: url(image/banner.jpg);
     background-position: center;
     background-size: cover;
+    background-color: #292a46;
 
 }
 
