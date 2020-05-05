@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs, Modal</title>
+    <style>
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+            font-size: 30px;
+            line-height: 100%;
+            text-align: center;
+            padding-top: 200px;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading">LOADING...</div>
+    <div class="tab-wrapper">
+        <div class = "tab" id = "tab1">
+            <div class="title">
+                <h2 class="active">Tab 1</h2>
+                <h2>Tab 2</h2>
+                <h2>Tab 3</h2>
+            </div>
+            <div class="content">
+                <div class="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nam voluptatem incidunt, doloribus quia ratione cum ut reprehenderit asperiores. Nam dignissimos quia assumenda rem quasi nostrum cumque eos ipsam laboriosam.</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, temporibus! Eveniet, cupiditate aliquid repellat et rerum iure praesentium aperiam, modi saepe molestiae magni recusandae! Atque excepturi voluptate autem in dolore.</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reprehenderit culpa atque magni minima numquam nihil expedita molestiae nobis quasi? Earum consectetur voluptatum perferendis repudiandae quo alias facilis error harum.</div>
+            </div>
+        </div>
+        <br>
+        <div class = "tab" id = "tab2">
+            <div class="title">
+                <h2 class="active">Tab 1</h2>
+                <h2>Tab 2</h2>
+                <h2>Tab 3</h2>
+            </div>
+            <div class="content">
+                <div class="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nam voluptatem incidunt, doloribus quia ratione cum ut reprehenderit asperiores. Nam dignissimos quia assumenda rem quasi nostrum cumque eos ipsam laboriosam.</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, temporibus! Eveniet, cupiditate aliquid repellat et rerum iure praesentium aperiam, modi saepe molestiae magni recusandae! Atque excepturi voluptate autem in dolore.</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reprehenderit culpa atque magni minima numquam nihil expedita molestiae nobis quasi? Earum consectetur voluptatum perferendis repudiandae quo alias facilis error harum.</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <div>
+        <button onclick="showModal1()">CLICK HERE TO SEE MODAL1</button>
+        <br>
+        <br>
+        <button onclick="showModal2()">CLICK HERE TO SEE MODAL2</button>
+        
+        <div class = "modal hide" id = "modal1">
+            <div class="content">
+                <i class="fas fa-times-circle"></i>
+                <a href="https://google.com.vn">
+                    MODAL
+                </a>
+            </div>
+        </div>
+
+        <div class = "modal hide" id = "modal2">
+            <div class="content">
+                <i class="fas fa-times-circle"></i>
+                <a href="https://google.com.vn">
+                    MODAL
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/85914aef36.js" crossorigin="anonymous"></script>    
+    <script type = "text/javascript" src="script.js"></script>
+</body>
+</html>

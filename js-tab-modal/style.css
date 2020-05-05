@@ -1,0 +1,86 @@
+/* CSS for TABS */
+.tab {
+    border: 1px solid rgb(211, 211, 211);
+    width: 50%;
+    padding: 5px;
+}
+
+.tab .title {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    
+}
+
+.tab .title h2 {
+    background-color: rgb(238, 238, 238);
+    padding:5px 10px;
+    margin: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tab .title h2:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.tab .title h2.active{
+    background-color: rgb(218, 218, 218);
+}
+
+.tab .content {
+    padding: 10px;
+}
+
+.tab .content > div {
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+
+/* CSS for MODAL */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.modal .content {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+    border: 2px solid #ebebeb;
+}
+
+.modal .content i {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal .content a{
+    display: block;
+    height: 100%;
+    text-indent: -10000px;
+    background-image: url('https://picsum.photos/id/237/600/300');
+}
+
+.hide {
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
